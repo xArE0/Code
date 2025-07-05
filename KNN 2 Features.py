@@ -36,3 +36,21 @@ predicted_label = knn_predict(test_point, dataset, k)
 
 print(f"\nTest Point: {test_point}")
 print(f"Predicted Category (k={k}): {predicted_label}")
+
+
+#for 3 points
+def manhattan(p1, p2):
+    return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1]) + abs(p1[2] - p2[2])
+
+
+dataset = [
+    ((4.0, 7.0, 1.2), "A"),
+    ((5.0, 6.0, 1.0), "A"),
+    ((6.0, 5.0, 2.0), "B"),
+    ((7.0, 4.0, 2.1), "B"),
+    ((8.0, 3.0, 3.2), "C"),
+    ((9.0, 2.0, 3.0), "C"),
+]
+
+
+test_point = (6.5, 4.5, 2.0)
